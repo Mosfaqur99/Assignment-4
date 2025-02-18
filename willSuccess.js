@@ -1,6 +1,6 @@
 function willSuccess(marks) {
-
-    let pass = 0;
+    if(Array.isArray(marks) === true){
+        let pass = 0;
     let fail = 0;
 
     for(const mark of marks){
@@ -18,9 +18,12 @@ function willSuccess(marks) {
     else{
         return false;
     }
-
-
+    }
+    else{
+        let Reply = "Invalid";
+        return Reply;
+    }
 }
 
-const gotChanced = willSuccess([50,46,100,80,74,12,44,45,10,45,78,95,33,49,70])
+const gotChanced = willSuccess(  [55,75,41,53,60,87,91,30])
 console.log(gotChanced)
